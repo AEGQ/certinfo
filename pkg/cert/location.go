@@ -47,7 +47,7 @@ func LoadCertificatesFromFile(fileName string) (CertificateLocation, error) {
 	if err != nil {
 		return CertificateLocation{}, fmt.Errorf("skipping %s file: %w", fileName, err)
 	}
-	return loadCertificate(fileName, b)
+	return LoadCertificate(fileName, b)
 }
 
 func LoadCertificateFromStdin() (CertificateLocation, error) {
@@ -56,7 +56,7 @@ func LoadCertificateFromStdin() (CertificateLocation, error) {
 	if err != nil {
 		return CertificateLocation{}, fmt.Errorf("reading stdin: %w", err)
 	}
-	return loadCertificate("stdin", content)
+	return LoadCertificate("stdin", content)
 }
 
 func LoadCertificate(fileName string, data []byte) (CertificateLocation, error) {
