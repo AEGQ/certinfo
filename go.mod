@@ -1,4 +1,4 @@
-module github.com/pete911/certinfo
+module github.com/AEGQ/certinfo
 
 go 1.18
 
