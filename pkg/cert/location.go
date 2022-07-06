@@ -59,7 +59,7 @@ func LoadCertificateFromStdin() (CertificateLocation, error) {
 	return loadCertificate("stdin", content)
 }
 
-func loadCertificate(fileName string, data []byte) (CertificateLocation, error) {
+func LoadCertificate(fileName string, data []byte) (CertificateLocation, error) {
 
 	certificates, err := FromBytes(data)
 	if err != nil {
